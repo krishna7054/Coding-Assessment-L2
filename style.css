@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+
+.head {
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.tab-container {
+    position: relative;
+    width: 40%;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 30%;
+    padding: 2px;
+    background-color: #b3b3b3;
+    border-radius: 9px;
+}
+
+.indicator {
+    content: "";
+    width: 130px;
+    height: 40px;
+    background: #000000;
+    position: absolute;
+    z-index: 9;
+    border: 0.5px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12), 0px 3px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 7px;
+    transition: all 0.2s ease-out;
+}
+
+.tab {
+    width: 130px;
+    height: 28px;
+    position: absolute;
+    z-index: 99;
+    outline: none;
+    opacity: 0;
+    display: flex;
+}
+
+.tab_label {
+    width: 130px;
+    height: 28px;
+    color: #fff;
+    position: relative;
+    z-index: 999;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.tab--1:checked ~ .indicator {
+    left: 10px;
+}
+
+.tab--2:checked ~ .indicator {
+    left: calc(130px + 55px);
+}
+
+.tab--3:checked ~ .indicator {
+    left: calc(130px * 2 + 95px);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    margin-left: 5px;
+}
+
+.frame-inner {
+    height: 350px;
+    width: 340px;
+}
+
+.btn {
+    height: 50px;
+    width: 340px;
+    margin-left: -20px;
+    cursor: pointer;
+    margin-top: -30px;
+    color: #fff;
+    background-color: #000000;
+}
+
+.title-vendor-container {
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
+.separator {
+    margin: 0 5px; /* Adjust spacing */
+}
+
+h4, h5 {
+  display: inline;
+  justify-content: flex-start;
+  margin: 0 5px;
+}
+
+h5{
+  color: gray;
+  text-decoration-line: line-through
+}
+
+h6{
+  margin-top: -15px;
+  margin-left: 280px;
+  color: red;
+}
+
+
+/* Media queries for Tablet Screen: 768px to 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .tab-container {
+      width: 60%;
+      margin-left: 20%;
+  }
+  
+  .indicator {
+      width: 100px;
+  }
+  
+  .tab {
+      width: 100px;
+  }
+  
+  .tab_label {
+      width: 100px;
+      font-size: 20px;
+  }
+  
+  .frame-inner {
+      height: 300px;
+      width: 290px;
+  }
+  
+  .btn {
+      height: 40px;
+      width: 290px;
+      margin-left: -15px;
+      margin-top: -25px;
+  }
+  
+  .title-vendor-container {
+      margin-top: -15px;
+  }
+  
+  h6 {
+      margin-left: 240px;
+  }
+}
+/* Media queries for Mobile Screen: Up to 767px */
+@media only screen and (max-width: 767px) {
+  .tab-container {
+      width: 80%;
+      margin-left: 10%;
+  }
+  
+  .indicator {
+      width: 80px;
+  }
+  
+  .tab {
+      width: 80px;
+  }
+  
+  .tab_label {
+      width: 80px;
+      font-size: 18px;
+  }
+  
+  .frame-inner {
+      height: 250px;
+      width: 240px;
+  }
+  
+  .btn {
+      height: 35px;
+      width: 240px;
+      margin-left: -10px;
+      margin-top: -20px;
+  }
+  
+  .title-vendor-container {
+      margin-top: -10px;
+  }
+  
+  h6 {
+      margin-left: 180px;
+  }
+}
