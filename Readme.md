@@ -25,7 +25,7 @@ To run this project locally, simply clone the repository to your local machine:
 
 ```bash
 
-git clone https://github.com/your-username/coding-assessment-l2.git
+git clone https://github.com/krishna7054/Coding-Assessment-L2.git
 ```
 # Usage
 Open the index.html file in a web browser to view the project. You can click on the tabs (Men, Women, Kids) to navigate between different categories of products. Product details will be dynamically loaded and displayed in the grid container.
